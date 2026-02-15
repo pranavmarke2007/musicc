@@ -1,0 +1,29 @@
+html,
+body{
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player{
+    
+    
+    width: 60vh;
+    height: 50vh;
+    background-color: cadetblue;
+}
+.button{
+    width: 60vh;
+    height: 5vh;
+}
+.songs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btn{
+    display: none;
+}
