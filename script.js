@@ -2,41 +2,78 @@ let obj = [
     {
         song: "Gal_sun",
         scr: "media/Gal_Sun.mp3",
-        photo:"media/Screenshot 2026-02-13 110222.png"
+        photo:"media/Screenshot 2026-02-13 110222.png",
+        singer:"messi"
     },
     {
         song: "Judas",
-        scr: "media/Lady Gaga - Judas - GOJO VS SUKUNA.mp3"
+        scr: "media/Lady Gaga - Judas - GOJO VS SUKUNA.mp3",
+        singer:"lady gaga"
     },
     {
         song: "Love me not ",
-        scr: "media/ptmusic.co.za - Ravyn Lenae - Love Me Not (Official Music Video) (320 KBps).mp3"
+        scr: "media/ptmusic.co.za - Ravyn Lenae - Love Me Not (Official Music Video) (320 KBps).mp3",
+        singer:"ravyn lenae"
     },
     {
         song: "Starboy",
-        scr: "media/SpotiDown.App - Starboy - The Weeknd.mp3"
+        scr: "media/SpotiDown.App - Starboy - The Weeknd.mp3",
+        singer:"weekend"
+    },
+    {
+        song: "Starboy",
+        scr: "media/SpotiDown.App - Starboy - The Weeknd.mp3",
+        singer:"weekend"
+    },
+    {
+        song: "Starboy",
+        scr: "media/SpotiDown.App - Starboy - The Weeknd.mp3",
+        singer:"weekend"
+    },
+    {
+        song: "Starboy",
+        scr: "media/SpotiDown.App - Starboy - The Weeknd.mp3",
+        singer:"weekend"
+    },
+    {
+        song: "Starboy",
+        scr: "media/SpotiDown.App - Starboy - The Weeknd.mp3",
+        singer:"weekend"
+    },
+    {
+        song: "Starboy",
+        scr: "media/SpotiDown.App - Starboy - The Weeknd.mp3",
+        singer:"weekend"
+    },
+    {
+        song: "Starboy",
+        scr: "media/SpotiDown.App - Starboy - The Weeknd.mp3",
+        singer:"weekend"
     },
     {
         song: "blinding lights",
-        scr: "media/Blinding Lights - The Weeknd.mp3"
+        scr: "media/Blinding Lights - The Weeknd.mp3",
+        singer:"weekend"
     }
 ]
 let buttons = []
 let songs = document.querySelector(".songs")
 let player = document.querySelector(".player");
 let btn=document.querySelector(".btn")
+let next =document.querySelector(".next")
+
 
 
 for (let i = 0; i < obj.length; i++) {
     let button1 = document.createElement("button")
     songs.appendChild(button1)
-    button1.innerText = `${i + 1}.${obj[i].song}`
-
+    button1.innerText = `${obj[i].song}`
     buttons.push(button1)
 }
 let div2=[]
 let audd=[]
 buttons.forEach((button,i) => {
+
     button.addEventListener("click", () => {
         songs.style.display = "none"
         let div1 = document.createElement("div")
@@ -60,11 +97,14 @@ buttons.forEach((button,i) => {
         aud.src=obj[i].scr
         aud.play()
         audd.push(aud)
-      btn.style.display="block"
+        // btn.innerText="library"
+        btn.style.display="block"
+        next.style.display="block"
       })
 });
+
 btn.addEventListener("click",()=>{
-        
+
         div2.forEach(element => {
             element.style.display="none"
         });
@@ -72,6 +112,6 @@ btn.addEventListener("click",()=>{
             element.pause()
         });
 
-         songs.style.display="flex"
+        songs.style.display="flex"
 }
 )
